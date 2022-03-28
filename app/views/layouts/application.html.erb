@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kadai7</title>
+    <title>宿泊予約サービスアプリ</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="header_nav_bar">
+        <div class="site_logo">
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png" %>
+          <% end %>
+        </div>
+        <div class="search_form">
+          <%= form_tag seek_path, :method => 'get' do %>
+            <%= text_field_tag :address, params[:address], class: "input_form", placeholder: "\uf3c5 エリア" %>
+          <% end %>
+          <%= form_tag search_path, :method => 'get' do %>
+            <%= text_field_tag :keyword, params[:keyword], class: "input_form", placeholder: "\uf002 キーワード" %>
+          <% end %>
+        </div>
+        
+        <div class="login_box">
+          <% if user_signed_in? %>
+            <div class="after_login">
+              <%= current_user.name %>
+            </div>
+              <div class="accordion_box">
+                <input type="checkbox" id="accordion">
+                <label for="accordion"><%= image_tag current_user.image, size: "65x65" %></label>
+                  <ul>
+                    <li><%= link_to "ルーム登録", new_room_path %></li>
+                    <li><%= link_to "予約済みルーム一覧", reservations_path %></li>
+                    <li><%= link_to "登録済みルーム一覧", users_path %></li>
+                    <li><%= link_to "設定", "/users/#{current_user.id}" %></li>
+                    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                  </ul>
+              </div>
+          <% else %>
+            <div class="login">
+              <%= link_to "ログイン", new_user_session_path, class: "login_btn" %>
+              <%= link_to "登録する", new_user_registration_path, class: "register_btn" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      
+    </header>
+    
+    <main class="main">
+      <%= yield %>
+    </main>
+    
+    <footer class="footer">
+      <p>© 2022 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

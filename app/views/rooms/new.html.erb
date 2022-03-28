@@ -1,0 +1,58 @@
+<article>
+  <div class="room_side">
+    <%= link_to "基本情報", new_room_path, class: "side_menu" %>
+  </div>
+  
+  <div class="room_content">
+    <div class="room_box2">
+      <p class="room_page_title">ルーム情報登録</p>
+      <%= form_for(@room) do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        
+      <div class="room_field">
+        <div class="label_tag">
+          <%= f.label :name, "ルーム名" %>
+          <p class="must">必須</p>
+        </div>
+        <%= f.text_field :name, placeholder: "ルーム名を入力" %>
+      </div>
+      
+      <div class="room_field">
+        <div class="label_tag">
+          <%= f.label :introduction, "ルーム紹介" %>
+          <p class="must">必須</p>
+        </div>
+        <%= f.text_area :introduction, placeholder: "ルーム説明を入力" %>
+      </div>
+      
+      <div class="room_field">
+        <div class="label_tag">
+          <%= f.label :price, "料金" %>
+          <p class="must">必須</p>
+        </div>
+        <%= f.text_field :price, placeholder: "一日あたりの料金を入力" %>
+      </div>
+    
+      <div class="room_field">
+        <div class="label_tag">
+          <%= f.label :address, "住所" %>
+          <p class="must">必須</p>
+        </div>
+        <%= f.text_field :address, placeholder: "住所を入力" %>
+      </div>
+    
+      <div class="room_field">
+        <div class="label_tag">
+          <%= f.label :image, "ルーム画像" %>
+          <p class="must">必須</p>
+        </div>
+        <%= f.file_field :image %>
+      </div>
+      
+      <div class="room_actions">
+        <%= f.submit "登録", class: "room_btn" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</article>

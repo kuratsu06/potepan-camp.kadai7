@@ -1,0 +1,21 @@
+<% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+<div class="reservation_box3">
+  <div class="reservation_list">
+    <p class=list_title>予約した部屋</p>
+    <%= @reservation.room.name %>
+  </div>  
+  <div class="reservation_list2">
+    <p class=list_title>開始日</p>
+    <%= @reservation.start_at.to_date %>
+  </div>
+  <div class="reservation_list2">
+    <p class=list_title>終了日</p>
+    <%= @reservation.end_at.to_date %>
+  </div>
+  <div class="reservation_list2">
+    <p class=list_title>価格</p>
+    <p><%= @total.to_i %> 円</p>
+  </div>
+</div>

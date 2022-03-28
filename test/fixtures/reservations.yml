@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  room: one
+  start_at: 2022-03-10 14:43:51
+  end_at: 2022-03-10 14:43:51
+  person: 1
+
+two:
+  user: two
+  room: two
+  start_at: 2022-03-10 14:43:51
+  end_at: 2022-03-10 14:43:51
+  person: 1

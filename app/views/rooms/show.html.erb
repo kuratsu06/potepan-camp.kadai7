@@ -1,0 +1,63 @@
+<div class="room_show_page">
+  <%= flash[:success] %>
+  <%= render "shared/error", obj: @reservation %>
+  <article>
+    <div class="room_side2">
+      <div class="room_image2">
+        <%= image_tag @room.image %>
+      </div>
+      <div class="room_content2">
+        <div class="room_plofile">
+          <div>
+            <%= link_to root_path do %>
+              <%= image_tag @room.user.image, size: "65x65" %>
+            <% end %>
+          </div>
+          <div>
+            <p class="room_name"><%= @room.name %></p>
+            <p><%= @room.address %></p>
+          </div>
+        </div>
+        <p class="room_introuction"><%= @room.introduction %></p>
+      </div>
+    </div>
+  
+    <div class="reservation_side">
+      <div class="reservation_box">
+        <div class="room_price">
+          <p>¥ <%= @room.price %> / 日</p>
+        </div>
+        <div class="reservation_form">
+          <%= form_tag new_reservation_path, method: :get do %>
+
+            <div class="reservation_field">
+              <%= label_tag :"開始日" %><br/>
+              <%= date_field(:reservation, :start_at) %>
+            </div>
+            
+            <div class="reservation_field">
+              <%= label_tag :"終了日" %><br/>
+              <%= date_field(:reservation, :end_at) %>
+            </div>
+            
+            <div class="reservation_field">
+              <%= label_tag :"人数" %><br/>
+              <%= number_field :reservation, :person %>
+            </div>
+            
+              <%= hidden_field_tag :room_id, @room.id %>
+            
+            <div class="reservation_actions">
+              <% if user_signed_in? %>
+                <%= hidden_field_tag :user_id, current_user.id %>
+                <%= submit_tag "予約する", class: "reservation_btn" %>
+              <% else %>
+                <%= link_to "ログイン", new_user_session_path, class: "reservation_login_btn" %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

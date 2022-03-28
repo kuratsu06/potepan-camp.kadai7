@@ -1,0 +1,270 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* session */
+a {
+  text-decoration: none;
+}
+
+.login_page {
+  padding: 100px;
+}
+
+.login_page_box {
+  width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 20px;
+  border: 1px #eee solid;
+  border-radius: 4px;
+}
+
+.user_page_title {
+  font-size: 20px;
+}
+
+.user_field input {
+  width: 300px;
+  margin: 10px;
+  padding: 5px 5px 5px 10px;
+  box-sizing: border-box;
+}
+
+.user_login_btn {
+  color: #fff;
+  background-color: #4169e1;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+  width: 330px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.other_page_btn {
+  margin: 10px;
+}
+
+/* registration */
+.register_page {
+  padding: 100px;
+}
+
+.register_box {
+  width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 20px;
+  border: 1px #eee solid;
+  border-radius: 4px;    
+}
+
+.user_register_btn {
+  color: #fff;
+  background-color: #4169e1;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+  width: 330px;
+  margin: 10px;
+  padding: 5px;
+}
+
+/* index */
+.user_index {
+  margin: 30px 80px;
+}
+
+.user_index h4 {
+  margin: 30px auto;
+}
+
+table {
+  text-align: center;
+}
+
+.room_index {
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+.room_index th {
+  padding: 6px 20px;
+}
+
+.room_index td {
+  padding: 10px 20px;
+}
+
+td img {
+  width: 260px;
+  height: 140px;
+}
+
+/* show */
+.user_side {
+  width: 240px;
+  height: 100vh;
+  padding: 10px;
+  border-right: 3px #c0c0c0 solid;
+  position: relative;
+}
+
+.user_side ul {
+  font-size: 18px;
+  margin: 40px 10px auto auto;
+  position: absolute;
+}
+
+.user_side li {
+  margin: 10px;
+  padding-right: 50px;
+  list-style: none;
+}
+
+.user_side li:active {
+  border-right: 3px #4169e1 solid;
+}
+
+.user_content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user_box {
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px #eee solid;
+}
+
+.user_page_title {
+  font-size: 20px;
+}
+
+.user_account {
+  padding: 30px 20px 20px;
+  border-top:1px #eee solid;
+  display: flex;
+}
+
+.user_account p {
+  font-weight: bold;
+  width: 180px;
+}
+
+.user_actions2 {
+  padding: 30px 20px 20px;
+  border-top:1px #eee solid;
+}
+
+.edit_user_btn {
+  color: #fff;
+  background-color: #4169e1;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+  padding: 6px 50px;
+}
+
+.edit_user_btn:hover {
+  color: #fff;
+}
+
+/* edit */
+.notice {
+  color: #fff;
+  background-color: #c2eeff;
+  text-align: center;
+}
+
+.alert {
+  color: #fff;
+  background-color: #ff9999;
+  text-align: center;
+}
+
+.user_image {
+  padding: 20px;
+  border-top:1px #eee solid;
+  text-align: center;
+}
+
+.user_image img {
+  border-radius: 50%;
+}
+
+.user_field2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  border-top:1px #eee solid;
+  display: flex;
+}
+
+.user_field2 .label_tag {
+  padding-top: 10px;
+}
+
+.user_field2 label {
+  font-weight: bold;
+}
+
+.user_field2 input {
+  width: 100%;
+  padding: 10px;
+}
+
+.user_name_field {
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+.user_field2 textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+/* devise_registrations_edit */
+.user_box2 {
+  width: 500px;
+  text-align: center;
+  margin: 50px auto;
+  padding: 30px 60px;
+  border: 1px #eee solid;
+}
+
+.user_field3 {
+  margin: 20px;
+}
+
+.user_field3 input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+.user_actions3 {
+  margin: 20px;
+}
+
+.user_update_btn {
+  color: #fff;
+  background-color: #4149e1;
+  width: 100%;
+  padding: 6px;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+}
+
+.back_btn {
+  color: #4169e1;
+  padding: 8px 152px;
+  border: 1px #999 solid;
+  border-radius: 4px;
+}
