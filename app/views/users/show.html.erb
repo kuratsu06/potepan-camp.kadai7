@@ -1,0 +1,27 @@
+<article>
+  <div class="user_side">
+    <ul>
+      <li><%= link_to "アカウント", user_path %></li>
+      <li><%= link_to "プロフィール", edit_user_path %></li>
+    </ul>
+  </div>
+  
+  <div class="user_content">
+    <div class="user_box">
+      <p class="user_page_title">アカウント</p>
+      <div class="user_form">
+        <div class=user_account>
+          <p>メールアドレス</p>
+          <%= @user.email %>
+        </div>
+        <div class="user_account">
+          <p>パスワード</p>
+          <p>********</p>
+        </div>
+        <div class="user_actions2">
+          <%= link_to "編集", edit_user_registration_path, class: "edit_user_btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

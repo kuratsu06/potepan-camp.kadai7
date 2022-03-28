@@ -1,0 +1,37 @@
+<div class="register_page">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    
+    <div class="register_box">
+      <p class="user_page_title">新しいアカウントを作成</p>
+      
+      <div class="user_field">
+        <p class="must">必須</p>
+        <%= f.text_field :name, autofocus: true, placeholder: "ユーザー名" %>
+      </div>
+      
+      <div class="user_field">
+        <p class="must">必須</p>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+      </div>
+      
+      <div class="user_field">
+        <p class="must">必須</p>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード" %>
+      </div>
+
+      <div class="user_field">
+        <p class="must">必須</p>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード確認" %>
+      </div>
+
+      <div class="user_actions">
+        <%= f.submit "新しいアカウントを作成", class: "user_register_btn" %>
+      </div>
+      
+      <div class="other_page_btn">
+        <%= link_to "すでにアカウントをお持ちの方はログイン", new_user_session_path %>
+      </div>      
+    </div>
+  <% end %>
+</div>

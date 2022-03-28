@@ -1,0 +1,268 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a {
+  text-decoration: none;
+}
+
+/* index */
+.result_count {
+  font-size: 26px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.rooms_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.room_box {
+  width: 300px;
+  height: 350px;
+  border: 1px #ccc solid;
+  margin: 20px;
+}
+
+.room_image{
+  background-color: #eee;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.room_image img {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+}
+
+.room_content {
+  padding: 10px;
+}
+
+.room_content a:hover {
+  color: inherit;
+}
+
+.room_content_name a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #999;
+}
+
+.room_content_name a:hover {
+  color: #999;
+}
+
+.room_content_address a {
+  font-weight: bold;
+  color: #000;
+}
+
+.room_content_price {
+  float: right;
+}
+
+.room_content_price a {
+  color: #000;
+}
+
+/* new, edit */
+article {
+  display: flex;
+}
+
+.room_side {
+  width: 200px;
+  padding: 10px;
+  border-right: 3px #c0c0c0 solid;
+  position: relative;
+}
+
+.side_menu {
+  font-size: 18px;
+  margin: 40px 10px auto 40px;
+  padding-right: 50px;
+  position: absolute;
+}
+
+.side_menu:active {
+  border-right: 3px #4169e1 solid;
+}
+
+.room_content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.room_box2 {
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px #eee solid;
+}
+
+.room_page_title {
+  font-size: 20px;
+}
+
+.room_field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  border-top: 1px #eee solid;
+  white-space: nowrap;
+}
+
+.room_field label {
+  font-weight: bold;
+}
+
+.label_tag {
+  width: 200px;
+}
+
+.room_field input {
+  width: 100%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.room_field textarea {
+  width: 100%;
+  height: auto;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.field_with_errors {
+  display: inline;
+  background-color: #ffbeda;
+  padding: 10px;
+}
+
+.must {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f08080;
+  border: 1px #f08080 solid;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.room_actions {
+  margin-top: 30px;
+  padding: 30px 40px;
+  border-top: 1px #eee solid;
+}
+
+.room_btn {
+  color: #fff;
+  background-color: #4169e1;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+  padding: 5px 50px;
+}
+
+/* show */
+.room_show_page {
+  padding: 30px 180px;
+}
+
+.room_side2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.room_image2 img {
+  width: 100%;
+  background-size: cover;
+}
+
+.room_content2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.room_plofile {
+  display: flex;
+}
+
+.room_name {
+  font-weight: bold;
+}
+
+.room_introuction {
+  margin: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px #ddd solid;
+  border-bottom: 1px #ddd solid;
+}
+
+.room_content2 img {
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.reservation_side {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+}
+
+.reservation_box {
+  width: 350px;
+  padding: 20px;
+  border: 1px #ddd solid;
+  display: inline-block;
+}
+
+.room_price {
+  font-size: 24px;
+}
+
+.reservation_field {
+  margin: 20px auto;
+}
+
+.reservation_form label {
+  font-size: 14px;
+}
+
+.reservation_form input {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 10px;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+}
+
+.reservation_btn {
+  color: #fff;
+  background-color: #4169e1;
+}
+
+.reservation_login_btn {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  background-color: #4169e1;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+  display: block;
+}
+
+.reservation_login_btn:hover {
+  color: #fff;
+}

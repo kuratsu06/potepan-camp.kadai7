@@ -1,0 +1,119 @@
+// Place all the styles related to the reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none;
+}
+
+/* index */
+.reservation_index {
+  margin: 30px 80px;
+}
+
+.reservation_index h4 {
+  margin: 30px auto;
+}
+
+table {
+  text-align: center;
+}
+
+td img {
+  width: 260px;
+  height: 140px;
+}
+
+/* new */
+.reservation_new_page {
+}
+
+.reservation_box2 {
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px #ccc solid;
+  box-sizing: border-box;
+}
+
+.reservation_page_title {
+  font-size: 24px;
+}
+
+.reservation_field2_a {
+  padding-top: 20px;
+  border-top: 1px #ccc solid;
+}
+
+.fake_form {
+  background-color: #eee;
+  padding: 6px 10px;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+.room_price {
+  font-size: 10px;
+}
+
+.reservation_actions {
+  margin-bottom: 20px;
+}
+
+.reservation_btn {
+  width: 100%;
+  color: #fff;
+  background-color: #4169e1;
+  padding: 6px;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+}
+
+.back_btn2 {
+  color: #fff;
+  background-color: #999;
+  margin-top: 20px;
+  padding: 6px 164px;
+  border: 1px #999 solid;
+  border-radius: 4px;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.back_btn2:hover {
+  color: #fff;
+}
+
+/* show */
+.notice {
+  color: #fff;
+  background-color: #c2eeff;
+  text-align: center;
+}
+
+.alert {
+  color: #fff;
+  background-color: #ff9999;
+  text-align: center;
+}
+
+.reservation_box3 {
+  width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px #ccc solid;
+}
+
+.reservation_list {
+  display: flex;
+}
+
+.reservation_list2 {
+  display: flex;
+  padding-top: 20px;
+  border-top: 1px #ccc solid;
+}
+
+.list_title {
+  font-weight: bold;
+  width: 200px;
+}

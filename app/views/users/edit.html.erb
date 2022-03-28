@@ -1,0 +1,50 @@
+<% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+<article>
+  <div class="user_side">
+    <ul>
+      <li><%= link_to "アカウント", user_path %></li>
+      <li><%= link_to "プロフィール", edit_user_path %></li>
+    </ul>
+  </div>
+  
+  <div class="user_content">
+    <div class="user_box">
+      <p class="user_page_title">プロフィール</p>
+      <div class="user_form">
+        <div class="user_image">
+          <%= image_tag @user.image, size: "65x65" %>
+        </div>
+        <div>
+          <%= form_for(@user) do |f| %>
+            <div class="user_field2">
+              <div class="label_tag">
+                <%= f.label :image, "アイコン画像" %>
+                <p class="must">必須</p>
+              </div>
+              <%= f.file_field :image %>
+            </div>
+            <div class="user_field2">
+              <div class="label_tag">
+                <%= f.label :name, "名前" %>
+                <p class="must">必須</p>
+              </div>
+              <%= f.text_field :name, class: "user_name_field" %>
+            </div>
+            <div class="user_field2">
+              <div class="label_tag">
+                <%= f.label :plofile, "自己紹介" %>
+                <p class="must">必須</p>
+              </div>
+              <%= f.text_area :plofile %>
+            </div>
+            <div class="user_actions2">
+              <%= f.submit "更新", class: "edit_user_btn" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

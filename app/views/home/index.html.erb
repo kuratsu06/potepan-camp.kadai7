@@ -1,0 +1,39 @@
+<div class="over_content">
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+  <% end %>
+  <div class="search_box">
+    <h3>Potepan Shareでまだ体験したことのない旅をしよう</h3>
+    <div class="search_form2">
+      <p>エリア</p>
+      <%= form_tag seek_path, :method => 'get' do %>
+        <%= text_field_tag :address, params[:address], placeholder: "東京" %><br/>
+        <%= submit_tag "探す", class: "search_btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="under_content">
+  <h4>おすすめのエリア</h4>
+  <div class="search_area">
+    <ul class="area_list">
+      <li>
+        <%= link_to image_tag("img_tokyo.jpg"), seek_path(:address => '東京') %>
+        <p>東京</p>
+      </li>
+      <li>
+        <%= link_to image_tag("img_osaka.jpg"), seek_path(:address => '大阪') %>
+        <p>大阪</p>
+      </li>
+      <li>
+        <%= link_to image_tag("img_kyoto.jpg"), seek_path(:address => '京都府') %>
+        <p>京都</p>
+      </li>
+      <li>
+        <%= link_to image_tag("img_sapporo.jpg"), seek_path(:address => '札幌') %>
+        <p>札幌</p>
+      </li>
+    </ul>
+  </div>
+</div>

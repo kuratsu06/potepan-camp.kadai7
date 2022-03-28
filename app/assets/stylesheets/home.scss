@@ -1,0 +1,99 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.over_content {
+  background-image: url("https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.notice {
+  color: #fff;
+  background-color: #c2eeff;
+  text-align: center;
+}
+
+.alert {
+  color: #fff;
+  background-color: #ff9999;
+  text-align: center;
+}
+
+.search_box {
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px #fff solid;
+  border-radius: 8px;
+  margin: 150px 100px;
+  padding: 30px;
+  position: absolute;
+  z-index: 2;
+}
+
+.search_form2 p {
+  margin: 30px auto 10px;
+}
+
+.search_form2 input {
+  font-size: 16px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+.search_btn {
+  font-size: 16px;
+  color: #fff;
+  background-color: #4169e1;
+  width: 100%;
+  height: 40px;
+  border: 1px #4169e1 solid;
+  border-radius: 4px;
+}
+
+.under_content {
+  padding: 50px;
+}
+
+.under_content h4 {
+  font-weight: bold;
+  margin: auto 70px 20px;
+}
+
+.search_area {
+  text-align: center;
+  position: relative;
+}
+
+.search_area li {
+  list-style: none;
+  margin: auto;
+}
+
+.search_area img {
+  width: 250px;
+  height: 360px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.area_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.area_list p {
+ color: #fff;
+ font-size: 30px;
+ font-weight: bold;
+ position: absolute;
+ top: 300px;
+ margin-left: 90px;
+}
